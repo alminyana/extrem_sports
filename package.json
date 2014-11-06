@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/alminyana/extrem_sports/issues"
   },
-  "homepage": "https://github.com/alminyana/extrem_sports"
+  "homepage": "https://github.com/alminyana/extrem_sports",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.1",
+    "mongoose": "^3.8.18"
+  }
 }
