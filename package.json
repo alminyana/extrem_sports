@@ -1,0 +1,25 @@
+{
+  "name": "extrem_sports",
+  "version": "1.0.0",
+  "description": "MeanStack app",
+  "main": "index.js",
+  "scripts": {
+    "test": "error de testing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alminyana/extrem_sports.git"
+  },
+  "keywords": [
+    "extrem",
+    "sports",
+    "mean",
+    "stack"
+  ],
+  "author": "enric alminyana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alminyana/extrem_sports/issues"
+  },
+  "homepage": "https://github.com/alminyana/extrem_sports"
+}
