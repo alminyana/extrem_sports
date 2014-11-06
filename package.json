@@ -2,7 +2,7 @@
   "name": "extrem_sports",
   "version": "1.0.0",
   "description": "MeanStack app",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "error de testing"
   },
