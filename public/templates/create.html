@@ -1,0 +1,36 @@
+<section class="wrap-create">
+<style>
+	#formu {
+		margin-top: 3em;
+		background-color: #222;
+		border-radius: 0 0 8px 8px;
+		height: 400px;	
+	}
+	#formu h1 {
+		width: 100%;
+		color: white;
+	}
+	#menu-create {
+		margin-top: -50px;
+	}
+</style>
+	<div class="cabecera">
+		<h1 class="londrina">new Adventure</h1>
+
+	</div>
+	<div class="row">
+		<div id="formu" class="small-12 medium-6 medium-offset-3 large-6 large-offset-3 columns">
+			<h1 class="londrina">ENTRY</h1>
+			<ul id="menu-create" class="inline-list right">
+				<li><a ui-sref=".datos">UNO</a></li>
+				<li><a ui-sref="">DOS</a></li>
+				<li><a ui-sref="">TRES</a></li>
+			</ul>
+			<div class="row">
+				<form action="" ng-submit="">
+					<div ui-view autoscroll="false"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
