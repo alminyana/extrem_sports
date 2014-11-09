@@ -1,23 +1,26 @@
 <section class="wrap-create">
-
 	<div class="cabecera">
 		<h1 class="londrina">new Adventure</h1>
 
 	</div>
 	<div class="row">
-		<div id="formu" class="small-12 medium-6 medium-offset-3 large-6 large-offset-3 columns">
+		<div id="formu1" class="small-12 medium-6 medium-offset-3 large-6 large-offset-3 columns">
 			<h1 class="londrina">ENTRY</h1>
 			<ul id="menu-create" class="inline-list right">
 				<li><a ui-sref=".datos">UNO</a></li>
 				<li><a ui-sref=".datos2">DOS</a></li>
-				<li><a href="">TRES</a></li>
+				<li><a ui-sref=".datos3">TRES</a></li>
 			</ul>
-
+			
 			<div class="row">
-				<form action="" ng-submit="">
+				<form action="" ng-submit="saveData()">
 					<div ui-view autoscroll="false" class="difuminar"></div>
 				</form>
+				<div class="small-10 small-offset-1 columns">
+					<a id="btn_formu" ng-click="mostrar=!mostrar" ng-hide="mostrar" ui-sref=".datos" class="button default radius expand difuminar">Begin Form!</a>
+				</div>
 			</div>
+			
 		</div>
 	</div>
 </section>

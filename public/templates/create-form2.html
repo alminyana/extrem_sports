@@ -21,14 +21,19 @@
     </div>
   </div>
   <div class="row">
-    <ul class="small-10 small-offset-1 columns inline-list">
-      <li style="color: white;margin-bottom:.5em;" ng-repeat="key in keys" class="difuminar">
-        <span class="label default radius">{{key}}</span> 
-      </li>
+    <div class="small-6 columns">
+      <ul id="keywords" class="small-10 small-offset-1 columns inline-list">
+        <li style="color: white;margin-bottom:.5em;" ng-repeat="key in keys" class="difuminar">
+          <span class="label default radius">{{key}}</span> 
+        </li>
     </ul>
+    </div>
+    <div class="small-6 columns text-center">
+      <a id="boton" ng-click="iraFormUno()" class="button tiny alert radius"><i class="fa fa-arrow-circle-left"></i> Back</a>
+      <a id="boton" ng-click="iraFormTres()" class="button tiny radius">Next <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+
+
   </div>
-  <div class="row text-center">
-  	<a id="boton" ng-click="iraFormUno()" class="button tiny alert radius"><i class="fa fa-arrow-circle-left"></i> Back</a>
-  	<a id="boton" ng-click="iraFormDos()" class="button tiny radius">Next <i class="fa fa-arrow-circle-right"></i></a>
-  </div>
+  
 </section>

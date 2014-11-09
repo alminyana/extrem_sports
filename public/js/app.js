@@ -31,4 +31,9 @@ angular
 				templateUrl: './templates/create-form2.html',
 				controller: 'createCtrl'
 			})
+			.state ('create.datos3', {
+				url:'/datos3',
+				templateUrl: './templates/create-form3.html',
+				controller: 'createCtrl'
+			})
 	}]);
