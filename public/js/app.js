@@ -19,10 +19,14 @@ angular
 			.state ('create', {
 				url: '/create',
 				templateUrl: './templates/create.html',
-				controller: 'CreateCtrl'
+				controller: 'createCtrl'
 			})
 			.state ('create.datos', {
-				url: '/create/datos',
+				url: '/datos',
 				templateUrl: './templates/create-form1.html'
+			})
+			.state ('create.datos2', {
+				url: '/datos2',
+				templateUrl: './templates/create-form2.html'
 			})
 	}]);

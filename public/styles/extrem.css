@@ -65,7 +65,8 @@ body {
 .vista {
 	z-index: 5;
 }
-/* titulo cabecera general */
+
+/* -------------------------------------------------  titulo cabecera general */
 .cabecera {
 		/*position: fixed;*/
 		width: 100%;
@@ -79,5 +80,27 @@ body {
 	text-align: center;
 	font-size: 5em;
 	text-transform: uppercase;
+}
+
+
+/*--------------------------------------------------------- vista create  */
+#formu {
+	margin-top: 3em;
+	background-color: #222;
+	border-radius: 0 0 8px 8px;
+	height: 400px;
+	overflow: hidden;
+	padding-bottom: 2em;	
+}
+#formu h1 {
+	width: 100%;
+	color: white;
+}
+#menu-create {
+	margin-top: -50px;
+}
+
+#boton {
+	margin-top: 2em;
 }
 

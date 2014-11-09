@@ -12,7 +12,7 @@
 }
 
 .difuminar.ng-enter {
-	opacity:.2;
+	opacity:0;
 }
 .difuminar.ng-enter-active {
 	opacity:1;

@@ -1,19 +1,5 @@
 <section class="wrap-create">
-<style>
-	#formu {
-		margin-top: 3em;
-		background-color: #222;
-		border-radius: 0 0 8px 8px;
-		height: 400px;	
-	}
-	#formu h1 {
-		width: 100%;
-		color: white;
-	}
-	#menu-create {
-		margin-top: -50px;
-	}
-</style>
+
 	<div class="cabecera">
 		<h1 class="londrina">new Adventure</h1>
 
@@ -23,12 +9,13 @@
 			<h1 class="londrina">ENTRY</h1>
 			<ul id="menu-create" class="inline-list right">
 				<li><a ui-sref=".datos">UNO</a></li>
-				<li><a ui-sref="">DOS</a></li>
-				<li><a ui-sref="">TRES</a></li>
+				<li><a ui-sref=".datos2">DOS</a></li>
+				<li><a href="">TRES</a></li>
 			</ul>
+
 			<div class="row">
 				<form action="" ng-submit="">
-					<div ui-view autoscroll="false"></div>
+					<div ui-view autoscroll="false" class="difuminar"></div>
 				</form>
 			</div>
 		</div>
