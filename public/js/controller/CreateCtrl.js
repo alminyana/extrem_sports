@@ -7,6 +7,9 @@ angular
 		$scope.formu2 = "Datos técnicos";
 		$scope.iraFormDos = function () {
 			$state.go('create.datos2',{},{reload: false});
-		}
+		};
+		$scope.iraFormUno = function () {
+			$state.go('create.datos',{},{reload: false});
+		};
 	}]);
 
