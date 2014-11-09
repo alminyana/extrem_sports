@@ -3,16 +3,29 @@
 	<div class="row">
     <div class="small-10 small-offset-1 columns">
       <label>Duration
-        <input type="number" size="4" placeholder="number of weeks" ng-model="form.weeks"/>
+        <input type="number" size="4" placeholder="number of weeks" ng-model="form.tiempo"/>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="small-10 small-offset-1 columns">
-      <label>Description
-        <textarea rows="3" placeholder="Amazing experience..." ng-model="form.desc"></textarea>
-      </label>
+      <label>Key words
+        <div class="row collapse">
+        <div class="small-9 columns">
+          <input type="text" ng-model="clave" placeholder="write a Key word">
+        </div>
+        <div class="small-3 columns">
+          <button ng-click="addKey()" class="success postfix">add Key</button>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="row">
+    <ul class="small-10 small-offset-1 columns inline-list">
+      <li style="color: white;margin-bottom:.5em;" ng-repeat="key in keys" class="difuminar">
+        <span class="label default radius">{{key}}</span> 
+      </li>
+    </ul>
   </div>
   <div class="row text-center">
   	<a id="boton" ng-click="iraFormUno()" class="button tiny alert radius"><i class="fa fa-arrow-circle-left"></i> Back</a>

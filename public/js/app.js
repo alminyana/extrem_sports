@@ -23,10 +23,12 @@ angular
 			})
 			.state ('create.datos', {
 				url: '/datos',
-				templateUrl: './templates/create-form1.html'
+				templateUrl: './templates/create-form1.html',
+				controller: 'createCtrl'
 			})
 			.state ('create.datos2', {
 				url: '/datos2',
-				templateUrl: './templates/create-form2.html'
+				templateUrl: './templates/create-form2.html',
+				controller: 'createCtrl'
 			})
 	}]);

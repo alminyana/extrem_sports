@@ -7,10 +7,17 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 //BD localhost connect
-mongoose.connect('mongodb://localhost:27017/extrem');
+mongoose.connect('mongodb://localhost:27017/extrem', function (error) {
+	if (error) {
+		throw error;
+	} else {
+		console.log('.... Conectado a MongoDB')
+	}
+});
 
 //BD MongoLab connect
-//var db = "";
+//mongoose.connect('mongodb://testinguser:testingtesting@ds043220.mongolab.com:43220/testing');
+
 
 app.use(express.static(__dirname + '/public'));
 //app.use(express.logger('dev'));
