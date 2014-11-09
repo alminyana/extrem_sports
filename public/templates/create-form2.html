@@ -3,7 +3,7 @@
 	<div class="row">
     <div class="small-10 small-offset-1 columns">
       <label>Duration
-        <input type="number" size="4" placeholder="number of weeks" ng-model="form.tiempo"/>
+        <input type="number" size="4" placeholder="number of weeks" ng-model="formData.tiempo"/>
       </label>
     </div>
   </div>
@@ -12,7 +12,7 @@
       <label>Key words
         <div class="row collapse">
         <div class="small-9 columns">
-          <input type="text" ng-model="clave" placeholder="write a Key word">
+          <input type="text" ng-model="formData.clave" placeholder="write a Key word">
         </div>
         <div class="small-3 columns">
           <button ng-click="addKey()" class="success postfix">add Key</button>
@@ -29,8 +29,8 @@
     </ul>
     </div>
     <div class="small-6 columns text-center">
-      <a id="boton" ng-click="iraFormUno()" class="button tiny alert radius"><i class="fa fa-arrow-circle-left"></i> Back</a>
-      <a id="boton" ng-click="iraFormTres()" class="button tiny radius">Next <i class="fa fa-arrow-circle-right"></i></a>
+      <a id="boton" ui-sref="create.datos" class="button tiny alert radius"><i class="fa fa-arrow-circle-left"></i> Back</a>
+      <a id="boton" ui-sref="create.datos3" class="button tiny radius">Next <i class="fa fa-arrow-circle-right"></i></a>
     </div>
 
 

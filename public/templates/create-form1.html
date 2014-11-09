@@ -7,18 +7,18 @@
 	<div class="row">
     <div class="small-10 small-offset-1 columns">
       <label>Name
-        <input type="text" placeholder="Adventure name" ng-model="nombre"/>
+        <input type="text" placeholder="Adventure name" ng-model="formData.nombre"/>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="small-10 small-offset-1 columns">
       <label>Description
-        <textarea rows="3" placeholder="Amazing experience..." ng-model="descrip"></textarea>
+        <textarea rows="3" placeholder="Amazing experience..." ng-model="formData.descrip"></textarea>
       </label>
     </div>
   </div>
   <div class="row text-center">
-  	<a id="boton" ng-click="iraFormDos()" class="button tiny radius">Next <i class="fa fa-arrow-circle-right"></i></a>
+  <a id="boton" ui-sref="create.datos2" class="button tiny radius">Next <i class="fa fa-arrow-circle-right"></i></a>
   </div>
 </section>

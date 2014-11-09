@@ -5,40 +5,24 @@ angular
 	.controller('createCtrl', ['$scope', '$http', '$stateParams', '$state', function ($scope, $http, $stateParams, $state){
 		$scope.formu1 = "Datos principales";
 		$scope.formu2 = "Datos técnicos";
-		//innstancia de array de palabras clave
-		var keys = []
-		$scope.keys = keys;
-		//metodos de cambio de estado desde el ui-view (ui-sref no funciona entre estados)
-		$scope.iraFormDos = function () {
-			$state.go('create.datos2',{},{reload: false});
-			
-			var objeto = {
-				nombre: $scope.nombre,
-				descripcion: $scope.descrip
-			};
-			console.log(objeto);
-		};
-		$scope.iraFormUno = function () {
-			$state.go('create.datos',{},{reload: false});
-		};
-		$scope.iraFormTres = function () {
-			$state.go('create.datos3', {}, {reload: false});
-		};
+		//objeto donde guardo los datos del form
+		$scope.formData = {};
+		$scope.keys=[];
 		$scope.addKey = function() {
-			//console.log($scope.clave);
-			var algo = $.inArray($scope.clave, $scope.keys);
-				console.log(algo);
+			var algo = $.inArray($scope.formData.clave, $scope.keys);
+				//console.log(algo);
 				if (algo==-1) {
-					if ($scope.clave != '') {
-						$scope.keys.push($scope.clave);
-						$scope.clave = '';
+					if ($scope.formData.clave != '') {
+						$scope.keys.push($scope.formData.clave);
+						$scope.formData.clave = '';
 					}
 				} else {
-					$scope.clave = '';
+					$scope.formData.clave = '';
 				}
+				$scope.formData.keywords = $scope.keys;
 		};
 		$scope.saveData = function () {
-			console.log($scope.objeto);
+			console.log($scope.formData);
 				
 		};
 	}]);
