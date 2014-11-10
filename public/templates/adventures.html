@@ -1,23 +1,42 @@
 <style>
 	.panel {
 		opacity: .5;
-		float: left;
-		width: 20%;
+		float:left;
+		width: 40%;
 		margin: .5em;
 		border-radius: 5px;
+		z-index: 5;
+		padding: .5em;
+		border: 10px solid #222;
+	}
+	#float {
+		float:left;
+	}
+	#barra {
+		margin: 0 1em 0 0;
+		background-color: #222;
+		opacity: .7;
+		border-radius: 5px;
+		height: 300px;
+	}
+	.espacio2em {
+		margin-top: 2em;
 	}	
 </style>
 <section class="wrap-adventures">
 	<div class="cabecera">
 		<h1 class="londrina">Our Adventures</h1>
 	</div>
+	<div class="espacio2em"></div>
 	<div class="row">
-		<div class="fondo">
-			<div class="s" ng-repeat="una in todas">
+		<div id="barra" class="small-2 columns">Barra Lateral</div>
+		<div id="float" class="small-8 small-offset-1 columns fondo">
+			<div id=class="small-4 columns" ng-repeat="una in todas">
 				<div class="panel">
-				{{una.nombre}}<br/>
-				{{una.descripcion}}
-			</div>
+					<strong>{{una.nombre}}</strong>
+					<br/>
+					{{una.descripcion}}
+				</div>
 			</div>
 		</div>
 	</div>
