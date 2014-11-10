@@ -23,7 +23,12 @@ angular
 		};
 		$scope.saveData = function () {
 			console.log($scope.formData);
-				
+			$http.post('/servicioAventuras', $scope.formData)
+				.success(function(data){
+					//console.log(data);
+					$scope.formData = {};
+					$scope.keys=[];
+				});		
 		};
 	}]);
 

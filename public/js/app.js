@@ -14,7 +14,8 @@ angular
 			})
 			.state ('adventures', {
 				url: '/adventures',
-				templateUrl: './templates/adventures.html'
+				templateUrl: './templates/adventures.html',
+				controller: 'todasCtrl'
 			})
 			.state ('create', {
 				url: '/create',

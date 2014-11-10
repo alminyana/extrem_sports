@@ -1,6 +1,24 @@
+<style>
+	.panel {
+		opacity: .5;
+		float: left;
+		width: 20%;
+		margin: .5em;
+		border-radius: 5px;
+	}	
+</style>
 <section class="wrap-adventures">
 	<div class="cabecera">
 		<h1 class="londrina">Our Adventures</h1>
 	</div>
-
+	<div class="row">
+		<div class="fondo">
+			<div class="s" ng-repeat="una in todas">
+				<div class="panel">
+				{{una.nombre}}<br/>
+				{{una.descripcion}}
+			</div>
+			</div>
+		</div>
+	</div>
 </section>

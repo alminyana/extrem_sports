@@ -1,22 +1,33 @@
 <section>
 	<div class="small-12 columns"><h4 class="subheader">{{formu2}}</h4></div>
-	<div class="row">
+	<div class="row espacio">
     <div class="small-10 small-offset-1 columns">
-      <label>Duration
-        <input type="number" size="4" placeholder="number of weeks" ng-model="formData.tiempo"/>
-      </label>
+
+      <div class="row collapse postfix-radius">
+        <div class="small-6 columns">
+          <input type="number" placeholder="number of weeks" ng-model="formData.tiempo">
+        </div>
+        <div class="small-6 columns">
+          <span class="postfix">Weeks duration</span>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="row">
     <div class="small-10 small-offset-1 columns">
       <label>Key words
         <div class="row collapse">
-        <div class="small-9 columns">
-          <input type="text" ng-model="formData.clave" placeholder="write a Key word">
-        </div>
-        <div class="small-3 columns">
-          <button ng-click="addKey()" class="success postfix">add Key</button>
-        </div>
+                  <div class="large-6 columns">
+              <div class="row collapse postfix-radius">
+                <div class="small-9 columns">
+                  <input type="text" placeholder="Value" ng-model="formData.clave">
+                </div>
+                <div class="small-3 columns">
+                  <a href="" class="button postfix" ng-click="addKey()">Add key</a>
+                </div>
+              </div>
+            </div>
       </div>
     </div>
   </div>

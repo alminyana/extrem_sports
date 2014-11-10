@@ -27,7 +27,8 @@ app.use(bodyParser.json());
 //app.use(express.methodOverride());
 
 //importar las rutas
-//require('./app/routes')(app);
+require('./app/routes')(app);
+
 
 //conectar el servidor escuchando por el puerto(var port)
 app.listen(port, function(){

@@ -67,6 +67,11 @@ body {
 }
 
 /* -------------------------------------------------  titulo cabecera general */
+
+.espacio {
+		margin-top: 6em;
+}
+
 .cabecera {
 		/*position: fixed;*/
 		width: 100%;
