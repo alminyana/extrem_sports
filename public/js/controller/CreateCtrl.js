@@ -23,12 +23,14 @@ angular
 		};
 		$scope.saveData = function () {
 			console.log($scope.formData);
-			$http.post('/servicioAventuras', $scope.formData)
+			if (Object.getOwnPropertyNames($scope.formData).length !== 0) {
+				$http.post('/servicioAventuras', $scope.formData)
 				.success(function(data){
 					//console.log(data);
 					$scope.formData = {};
 					$scope.keys=[];
-				});		
+				});
+			}		
 		};
 	}]);
 

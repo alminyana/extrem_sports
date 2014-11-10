@@ -1,4 +1,26 @@
 <section class="wrap-create">
+<style>
+#menu-create {
+	margin-right: 2em;
+}
+	#menu-create a {
+		 background-color: white;
+		 padding: .5em;
+		 border-radius: 50%;
+		 display: block;
+		 height: 25px;
+		 padding-bottom: .5em;
+		 color: white;
+	}
+	span.topo {opacity: 0;}
+	.activado {
+		border: solid 4px grey;
+		border-style: inset;
+		width: 25px;
+
+	}
+
+</style>
 	<div class="cabecera">
 		<h1 class="londrina">new Adventure</h1>
 
@@ -7,9 +29,9 @@
 		<div id="formu1" class="small-12 medium-6 medium-offset-3 large-6 large-offset-3 columns">
 			<h1 class="londrina">ENTRY</h1>
 			<ul id="menu-create" class="inline-list right">
-				<li><a ui-sref=".datos">UNO</a></li>
-				<li><a ui-sref=".datos2">DOS</a></li>
-				<li><a ui-sref=".datos3">TRES</a></li>
+				<li><a ui-sref=".datos" ui-sref-active="activado"><span class="topo">1</span></a></li>
+				<li><a ui-sref=".datos2" ui-sref-active="activado"><span class="topo">2</span></a></li>
+				<li><a ui-sref=".datos3" ui-sref-active="activado"><span class="topo">3</span></a></li>
 			</ul>
 			
 			<div class="row">
