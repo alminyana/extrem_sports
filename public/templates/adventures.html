@@ -1,17 +1,4 @@
 <style>
-	.panel {
-		opacity: .5;
-		float:left;
-		width: 40%;
-		margin: .5em;
-		border-radius: 5px;
-		z-index: 5;
-		padding: .5em;
-		border: 10px solid #222;
-	}
-	#float {
-		float:left;
-	}
 	#barra {
 		margin: 0 1em 0 0;
 		background-color: #222;
@@ -23,21 +10,71 @@
 		margin-top: 2em;
 	}	
 </style>
+<style>
+	.grid {
+		float:left;
+		margin: .2em;
+		padding: .2em;
+	}
+	.grid figure {
+		width: 150px;
+		height: 150px;
+		border: solid #ccc 4px;
+		border-radius: 8px;
+	}
+
+	figcaption h2 {
+		font-size: 17px;
+		color: white;
+	}
+	figcaption h2 span {
+		margin:0;
+		padding: 0;
+	}
+
+	figcaption p {
+		font-size: 10px;
+		top: 40px;
+	}
+</style>
 <section class="wrap-adventures">
+
 	<div class="cabecera">
 		<h1 class="londrina">Our Adventures</h1>
 	</div>
 	<div class="espacio2em"></div>
 	<div class="row">
 		<div id="barra" class="small-2 columns">Barra Lateral</div>
-		<div id="float" class="small-8 small-offset-1 columns fondo">
-			<div id=class="small-4 columns" ng-repeat="una in todas">
-				<div class="panel">
-					<strong>{{una.nombre}}</strong>
-					<br/>
-					{{una.descripcion}}
-				</div>
+		<div class="small-9 columns">
+
+			<div class="grid" ng-repeat="una in todas">
+				<figure class="effect-lily">
+        <img src="../img/campamento.jpg" alt="img01"/>
+        <figcaption>
+            <h2><span>{{una.nombre}}</span></h2>
+            <p>{{una.descripcion}}</p>
+            <a href="" data-reveal-id="myModal">View more</span>
+        </figcaption>         
+    </figure>
 			</div>
+
+
+
 		</div>
 	</div>
+	<div id="myModal" class="reveal-modal">
+			<h1>Reveal Modal Goodness</h1>
+			<p>This is a default modal in all its glory, but any of the styles here can easily be changed in the CSS.</p>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+	<a href="#" data-reveal-id="myModal">View more</a>
+	
 </section>
+<script>
+	        $('#myModal').reveal({
+             animation: 'fadeAndPop',                   //fade, fadeAndPop, none
+             animationspeed: 300,                       //how fast animtions are
+             closeonbackgroundclick: true,              //if you click background will modal close?
+             dismissmodalclass: 'close-reveal-modal'    //the class of a button or element that will close an open modal
+        });
+</script>

@@ -1,14 +1,27 @@
-
+<style>
+	.tituloaventura {
+		background-color: grey;
+		padding: -5em;
+		margin: 1em;
+		color: white;
+	}
+</style>
 <section class="espacio">
 	<div class="row">
 		<div class="small-4 small-offset-4 text-center">
-			<a ui-sref="create.datos2" class="button tiny alert radius"><i class="fa fa-arrow-circle-left"></i> back</a>
+			<a ui-sref="create.datos2" class="button tiny alert radius skew-backward"><i class="fa fa-arrow-circle-left"></i> back</a>
 		</div>
 	</div>
 	<div class="row">	
 		<div class="small-6 small-offset-3 text-center">
 		<br/>
-			<button type="submit" class="default radius expand"><i class="fa fa-flash"></i> Submit data</button>
+			<button data-reveal-id="myModal" type="submit" class="default radius pulse-grow"><i class="fa fa-flash"></i> Submit data</button>
 		</div>
 	</div>
+	<div id="myModal" class="reveal-modal">
+			<h1>Reveal Modal Goodness</h1>
+			<p>This is a default modal in all its glory, but any of the styles here can easily be changed in the CSS.</p>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+
 </section>

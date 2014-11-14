@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Mean app - mongoose - express - node - mongodb</title>
-	<link rel="stylesheet" href="styles/foundation.css">
+	<link rel="stylesheet" href="styles/lib/foundation.css">
 	<link rel="stylesheet" href="styles/extrem.css">
   <link href='http://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/animacion.css">
-  <link href="styles/hover.css" rel="stylesheet" media="all">
+  <link href="styles/lib/hover.css" rel="stylesheet" media="all"><!-- hover effects botones formulario alta-aventura-->
+  <link rel="stylesheet" href="styles/lib/set1.css"><!--hover effects de vista adventures.html-->
+  <link rel="stylesheet" href="styles/lib/reveal.css"><!--modals-->
 </head>
 <body>
 <header>
@@ -50,8 +52,7 @@
   <!-- angularjs -->
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js" type="text/javascript"></script>
   <!-- JQuery -->
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+ 
   <!-- jquery.ui  -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
   <!-- angular ui.route -->
@@ -65,12 +66,16 @@
   <script src="js/app.js"></script>
   <script src="js/controller/createCtrl.js"></script>
   <script src="js/controller/todasCtrl.js"></script>
+  <!-- reveal (modals)-->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.reveal.js"></script>
   <script>
       $(document).ready(function(){
       	$(document).foundation();
 	      $( "li" ).bind( "mouseenter mouseleave", function() {
   			   $( this ).toggleClass( "active" );
 		    });
+
       });
 
     </script>

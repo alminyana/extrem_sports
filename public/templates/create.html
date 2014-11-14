@@ -7,6 +7,20 @@
 		border-radius: 50%;
 		font-size: .7rem;
 	}
+	.botonsalir {
+		text-transform: none;
+		margin-top: .5em;
+		float:right;
+		font-weight: bolder;
+	}
+	.botonsalir a {
+		padding: .2em;
+		color: #ccc;
+		border-radius: 5px;
+		font-size: 20px;
+	}
+	.botonsalir a:hover {
+	}
 </style>
 	<div class="cabecera">
 		<h1 class="londrina">new Adventure</h1>
@@ -14,8 +28,9 @@
 	</div>
 	<div class="row">
 		<div id="formu1" class="small-12 medium-6 medium-offset-3 large-6 large-offset-3 columns">
+			<div class="botonsalir"><a class="pop" href="/#/adventures">X</a></div>
 			<h1 class="londrina">ENTRY</h1>
-			<ul id="menu-create" class="inline-list right">
+			<ul ng-show="muestranav" id="menu-create" class="inline-list right">
 				<li><a ui-sref=".datos" id="bb" class="button-hovercss hollow"></a></li>
 				<li><a ui-sref=".datos2" id="bb" class="button-hovercss hollow"></a></li>
 				<li><a ui-sref=".datos3" id="bb" class="button-hovercss hollow"></a></li>
@@ -30,7 +45,7 @@
 					-->
 				</form>
 				<div class="small-10 small-offset-1 columns">
-					<a id="btn_formu" ng-click="mostrar=!mostrar" ng-hide="mostrar" ui-sref=".datos" class="button default radius expand difuminar">Begin Form!</a>
+					<a id="btn_formu" ng-click="mostrar=!mostrar; muestranav=!muestranav" ng-hide="mostrar" ui-sref=".datos" class="button default radius expand difuminar wobble-vertical">Begin Form!</a>
 				</div>
 
 			</div>
