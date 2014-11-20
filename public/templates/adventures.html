@@ -1,80 +1,124 @@
 <style>
-	#barra {
-		margin: 0 1em 0 0;
-		background-color: #222;
-		opacity: .7;
-		border-radius: 5px;
-		height: 300px;
-	}
-	.espacio2em {
-		margin-top: 2em;
-	}	
-</style>
-<style>
-	.grid {
-		float:left;
-		margin: .2em;
-		padding: .2em;
-	}
-	.grid figure {
-		width: 150px;
-		height: 150px;
-		border: solid #ccc 4px;
-		border-radius: 8px;
-	}
+	a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
 
-	figcaption h2 {
-		font-size: 17px;
+.event {
+	border:solid black 1px;
+	float:left;
+	margin:1em;
+  	width: 200px;
+  	height: 200px;
+  	overflow: hidden;
+  	background-color: rgba(0,0,5,.5);
+  	position: relative;
+  	background: url('../img/campamento-peque.jpg') no-repeat center;
+   	-webkit-transition: all 1s ease .2s;
+}
+.event:hover {
+	background: url('../img/campamento-peque.jpg') no-repeat right;
+}
+
+  .event a {
+    display: block;
+    margin: .5em;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-transform: none;
+
+  }
+
+    .event a span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 210px;
+      left: 0;
+      padding: 20px;
+      background-color: rgba(0,0,5,.7);
+      
+      -webkit-transition: all .5s ease .3s;
+         -moz-transition: all .5s ease .3s;
+          -ms-transition: all .5s ease .3s;
+           -o-transition: all .5s ease .3s;
+              transition: all .5s ease .3s;
+    }
+
+    .event a:hover span,
+    .event a:focus span {
+      top: 52px;
+      left: 0;
+    }
+	img {
+		position:relative;
+		max-width: 200%;
+		height: 200px;
+		width: 180%;
+		-webkit-transition:3s ease;
+		opacity: 1;
+	}
+	img:hover {
+		-webkit-transform:translate(-50px,0px);
+	}
+	h4 {
 		color: white;
-	}
-	figcaption h2 span {
+		background-color: rgba(0,0,0,.3);
+		width: 100%;
 		margin:0;
-		padding: 0;
-	}
-
-	figcaption p {
-		font-size: 10px;
-		top: 40px;
+		padding:.2em;
 	}
 </style>
 <section class="wrap-adventures">
 
-	<div class="cabecera">
+	<div class="cabecera hide-for-small-only">
 		<h1 class="londrina">Our Adventures</h1>
 	</div>
-	<div class="espacio2em"></div>
-	<div class="row">
-		<div id="barra" class="small-2 columns">Barra Lateral</div>
-		<div class="small-9 columns">
-
-			<div class="grid" ng-repeat="una in todas">
-				<figure class="effect-lily">
-        <img src="../img/campamento.jpg" alt="img01"/>
-        <figcaption>
-            <h2><span>{{una.nombre}}</span></h2>
-            <p>{{una.descripcion}}</p>
-            <a href="" data-reveal-id="myModal">View more</span>
-        </figcaption>         
-    </figure>
-			</div>
-
-
-
-		</div>
+	<div class="cabecera-peque show-for-small-only">
+		<h3 class="londrina">Our Adventures</h3>
 	</div>
-	<div id="myModal" class="reveal-modal">
-			<h1>Reveal Modal Goodness</h1>
-			<p>This is a default modal in all its glory, but any of the styles here can easily be changed in the CSS.</p>
-			<a class="close-reveal-modal">&#215;</a>
-		</div>
-	<a href="#" data-reveal-id="myModal">View more</a>
+	<div class="espacio2em"></div>
+
+
+
+	<div class="row">
+		<div id="barra" class="small-2 columns barra">Barra Lateral</div>
+		<div class="small-9 small-offset-1 columns barra">
+			<section ng-repeat="una in todas" id="events">
+				
+			    <div class="event">
+			   		
+			      <a href="#" title="{{una.nombre}}">
+			      	<h4>{{una.nombre}}</h4>
+			        
+			        <span>
 	
+			          Location: Seville<br />
+			          Where?: Isla de la Cartuja<br />
+			          Price: Free!<br />
+			          More info &raquo;
+			        </span>
+			        
+			      </a>
+
+			    </div><!-- .event -->
+			  </section><!-- #events -->
+
+			<!-- <figure ng-repeat="una in todas" class="aventura_una">
+	        	<img src="../img/campamento.jpg" alt="img01"/>
+	            <figcaption class="datos_una">
+	            	<h4>{{una.nombre}}</h4>
+	            </figcaption>
+			</figure> -->
+		</div>	
+	</div>
 </section>
 <script>
-	        $('#myModal').reveal({
-             animation: 'fadeAndPop',                   //fade, fadeAndPop, none
-             animationspeed: 300,                       //how fast animtions are
-             closeonbackgroundclick: true,              //if you click background will modal close?
-             dismissmodalclass: 'close-reveal-modal'    //the class of a button or element that will close an open modal
-        });
+	$(document).ready(function(){
+		$('a').mouseover(function(event) {
+			alert('hola');
+		});
+	});
 </script>
