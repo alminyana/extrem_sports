@@ -8,7 +8,7 @@ body {
 }
 .wrap-home {
 	background: url('../img/campamento.jpg') no-repeat fixed center;
-	height: 800px;
+	height: 100%;
 }
 .wrap-adventures {
 	background: url('../img/african.jpg') no-repeat fixed center;
@@ -165,6 +165,7 @@ body {
 .espacio2em {
 	margin-top: 2em;
 }
+/*
 .aventura_una img {
 	position:relative;
 	
@@ -196,3 +197,4 @@ figcaption {
 	padding:.5em;
 	width: 100%;
 }
+*/

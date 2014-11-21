@@ -8,16 +8,22 @@
 	border:solid black 1px;
 	float:left;
 	margin:1em;
-  	width: 200px;
+  	width: 150px;
   	height: 200px;
   	overflow: hidden;
   	background-color: rgba(0,0,5,.5);
   	position: relative;
-  	background: url('../img/campamento-peque.jpg') no-repeat center;
+  	
+
+}
+
+.campa {
+	background: url('../img/campamento-peque.jpg') no-repeat;
+  	background-position:-400px -200px;
    	-webkit-transition: all 1s ease .2s;
 }
-.event:hover {
-	background: url('../img/campamento-peque.jpg') no-repeat right;
+.campa:hover {
+	background-position:-200px -200px;
 }
 
   .event a {
@@ -49,7 +55,7 @@
 
     .event a:hover span,
     .event a:focus span {
-      top: 52px;
+      top: 110px;
       left: 0;
     }
 	img {
@@ -67,8 +73,8 @@
 		color: white;
 		background-color: rgba(0,0,0,.3);
 		width: 100%;
-		margin:0;
-		padding:.2em;
+		margin:-8px;
+		padding:.4em;
 	}
 </style>
 <section class="wrap-adventures">
@@ -88,17 +94,19 @@
 		<div class="small-9 small-offset-1 columns barra">
 			<section ng-repeat="una in todas" id="events">
 				
-			    <div class="event">
+			    <div class="event campa">
 			   		
 			      <a href="#" title="{{una.nombre}}">
 			      	<h4>{{una.nombre}}</h4>
 			        
 			        <span>
-	
-			          Location: Seville<br />
+			        <button class="button expand">Vamonoss</button>
+						
+			         <!-- Location: Seville<br />
 			          Where?: Isla de la Cartuja<br />
 			          Price: Free!<br />
-			          More info &raquo;
+			          More info &raquo;  -->
+			          
 			        </span>
 			        
 			      </a>
@@ -115,10 +123,3 @@
 		</div>	
 	</div>
 </section>
-<script>
-	$(document).ready(function(){
-		$('a').mouseover(function(event) {
-			alert('hola');
-		});
-	});
-</script>

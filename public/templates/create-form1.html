@@ -1,14 +1,21 @@
 <section>
 <style>
 	
-
+.espe {
+  margin-right:2.5em;
+}
 </style>
 	<div class="small-12 columns"><h4 class="subheader">{{formu1}}</h4></div>
 	<div class="row">
-    <div class="small-10 small-offset-1 columns radius">
+    <div class="small-4 small-offset-1 columns radius">
       <label>Name
         <input class="radius" type="text" placeholder="Adventure name" ng-model="formData.nombre"/>
       </label>
+    </div>
+    <div class="small-4 small-offset-1 columns espe">
+      <label>Especialidad
+      <input type="text" class="radius" ng.model="formData.especialidad">
+      </label>  
     </div>
   </div>
   <div class="row">
