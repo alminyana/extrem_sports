@@ -29,6 +29,7 @@ angular
 					//console.log(data);
 					$scope.formData = {};
 					$scope.keys=[];
+					$state.go('adventures',{},{reload: true});
 				});
 			}		
 		};

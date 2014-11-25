@@ -11,12 +11,13 @@ body {
 	height: 100%;
 }
 .wrap-adventures {
-	background: url('../img/african.jpg') no-repeat fixed center;
-	height: 800px;
+	/*background: url('../img/african.jpg') repeat fixed center;*/
+	height: 1000px;
+	background-color: orange;
 }
 .wrap-create {
 	background: url('../img/terminal.jpg') fixed center;
-	height: 800px;
+	height: 100%;
 }
 
 /*clase londrina para asignar la tipo*/
@@ -62,10 +63,15 @@ body {
 .boton button a {
 	text-decoration: none;
 }
-.vista {
+#vista {
 	z-index: 5;
+	height: 100%;
 }
-
+#todas {
+	background-color: rgba(0,0,0,.5);
+	height: 500px;
+	overflow: scroll;
+}
 /* -------------------------------------------------  titulo cabecera general */
 
 .espacio {
@@ -116,7 +122,7 @@ body {
 	margin-top: 3em;
 	background-color: #222;
 	border-radius: 0 0 8px 8px;
-	height: 400px;
+	height: 100%;
 	padding-bottom: 2em;
 	overflow: hidden;
 	padding-bottom: 2em;
@@ -148,6 +154,7 @@ body {
 
 	background-color: rgba(0,0,0,.4);
 	padding: 1em;
+	height:100%;
 }
 .aventura_una {
 	background-color: white;
